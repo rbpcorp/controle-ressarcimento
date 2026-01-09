@@ -1,0 +1,5 @@
+{
+  "name": "Patrimonium - Controle de Ressarcimento",
+  "description": "Sistema completo para gestão, lançamento e baixa de ressarcimento de impostos (ICMS-ST, IPI, PIS/COFINS).",
+  "requestFramePermissions": []
+}

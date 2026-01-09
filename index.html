@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrimonium - Controle Fiscal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Dark Corporate Palette */
+        --primary: #1A3375;
+        --secondary: #E2E8F0; /* Light Text for Dark Mode */
+        --text-main: #E2E8F0;
+        --text-light: #94A3B8;
+        --accent: #61CE70;
+        --highlight: #00FCA8;
+        --border-color: #2D3748; /* Dark Border */
+        --bg-body: #0B1120; /* Deep Night Blue */
+        --bg-surface: #151E32; /* Lighter Night Blue */
+        
+        /* Spacing & Shadows */
+        --shadow-natural: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-main);
+        background-color: var(--bg-body);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto Slab', serif;
+      }
+
+      /* Card Style - Dark Boxed */
+      .neu-flat {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-natural);
+        border-radius: 8px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      /* Inputs - Dark Inset */
+      .neu-pressed {
+        background: #0F172A; /* Darker input bg */
+        border: 1px solid #334155;
+        border-radius: 4px;
+        color: var(--text-main);
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.2s ease;
+      }
+
+      .neu-pressed:focus-within, .neu-pressed:focus {
+        background: #0F172A;
+        border-color: #61CE70; /* Green focus */
+        box-shadow: 0 0 0 1px #61CE70;
+        outline: none;
+      }
+      
+      /* Buttons */
+      .neu-btn {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        color: var(--text-main);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .neu-btn:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-1px);
+        background: #1A2642;
+      }
+
+      .neu-btn:active:not(:disabled) {
+        transform: translateY(0);
+        background: #0F172A;
+      }
+      
+      .neu-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .neu-icon-box {
+        background: #1E293B;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border-color);
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B1120; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+      
+      /* Select Arrow - Inverted Color */
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+      }
+
+      /* Modal Animation */
+      @keyframes fadeInScale {
+        0% { opacity: 0; transform: scale(0.98); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      .animate-glass-pop {
+        animation: fadeInScale 0.2s ease-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
